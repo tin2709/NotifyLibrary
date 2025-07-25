@@ -1,0 +1,13 @@
+{
+  "include": [
+    "src/ui.ts"
+  ],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true,
+    "removeComments": true
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notify2T Demo - Unique UI</title>
+  <!-- Nhúng font tùy chỉnh nếu có, ví dụ từ Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+  <!-- Import CSS từ thư viện đã build -->
+  <link rel="stylesheet" href="../dist/ui.style.css">
+  <style>
+    body {
+      font-family: var(--ui-font-family); /* Sử dụng biến font đã định nghĩa */
+      margin: 20px;
+      padding-bottom: 200px; /* For testing bottom notifications */
+      background-color: #f0f2f5; /* Light background for contrast */
+    }
+    h1, h2 {
+      margin-top: 40px;
+      color: var(--ui-primary-text);
+    }
+    .button-group {
+      display: flex;
+      gap: var(--ui-gap-sm);
+      margin-bottom: var(--ui-gap-md);
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: var(--ui-radius-sm);
+      border: 1px solid var(--ui-border-light);
+      background-color: var(--ui-bg-light);
+      transition: all 0.2s ease;
+      min-width: 120px;
+      color: var(--ui-primary-text);
+      box-shadow: var(--ui-shadow-soft);
+    }
+    button:hover {
+      border-color: var(--ui-info);
+      color: var(--ui-info);
+      box-shadow: 0 4px 8px rgba(var(--ui-info-rgb), 0.1);
+      transform: translateY(-2px);
+    }
+    #alertContainer1, #alertContainer2 {
+      border: 1px dashed #ccc;
+      padding: var(--ui-gap-md);
+      margin-top: var(--ui-gap-md);
+      min-height: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--ui-gap-sm); /* Spacing between alerts */
+      background-color: #fff;
+      border-radius: var(--ui-radius-sm);
+    }
+  </style>
+</head>
+<body>
+<h1>Notify2T Demo</h1>
+
+<h2>Notifications</h2>
+<div class="button-group">
+  <button id="notiSuccess">Success Notification</button>
+  <button id="notiError">Error Notification</button>
+  <button id="notiWarning">Warning Notification</button>
+  <button id="notiInfo">Info Notification</button>
+  <button id="notiNoTitle">No Title Notification</button>
+  <button id="notiNoProgressBar">No Progress Bar</button>
+</div>
+
+<h2>Modals</h2>
+<div class="button-group">
+  <button id="modalSimple">Simple Modal</button>
+  <button id="modalCustomFooter">Custom Footer Modal</button>
+  <button id="modalNoClosable">No Close Button Modal</button>
+  <button id="modalNoMask">No Mask Closable Modal</button>
+</div>
+
+<h2>Alerts (Inline)</h2>
+<div class="button-group">
+  <button id="alertSuccess">Success Alert</button>
+  <button id="alertError">Error Alert (Expandable)</button>
+  <button id="alertNoIcon">No Icon Alert</button>
+  <button id="alertNoClosable">No Closable Alert</button>
+</div>
+
+<div id="alertContainer1">
+  <h3>Alerts will appear here:</h3>
+</div>
+
+<div id="alertContainer2">
+  <h3>Another alert container:</h3>
+</div>
+
+<!-- Import JS của bạn -->
+<script type="module" src="./app.js"></script>
+</body>
+</html>

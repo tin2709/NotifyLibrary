@@ -1,0 +1,40 @@
+{
+  "name": "notify2t",
+  "version": "1.3.0",
+  "description": "A versatile UI notification, alert, and modal library with unique Ant Design inspired look.",
+  "main": "dist/ui.js",
+  "types": "dist/ui.d.ts",
+  "files": [
+    "./dist/ui.d.ts",
+    "./dist/ui.js",
+    "./dist/ui.style.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tin2709/NotifyLibrary.git"
+  },
+  "scripts": {
+    "build": "tsc && esbuild src/ui.ts --bundle --minify --outfile=dist/ui.js --format=esm && copy src\\ui.style.css dist\\ui.style.css"
+  },
+  "keywords": [
+    "Notify",
+    "Notification",
+    "Toast",
+    "Alert",
+    "Modal",
+    "UI",
+    "Frontend",
+    "Unique",
+    "Custom"
+  ],
+  "author": "TRUNG TIN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tin2709/NotifyLibrary/issues"
+  },
+  "homepage": "https://github.com/tin2709/NotifyLibrary#readme",
+  "devDependencies": {
+    "esbuild": "^0.19.4",
+    "typescript": "^5.2.2"
+  }
+}
